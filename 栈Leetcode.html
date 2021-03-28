@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>栈的练习题</title>
   </head>
   <body>
@@ -11,26 +8,24 @@
       1.有效的括号，左括号必须与右括号以相同的类型和顺序闭合
     </html>
     <script>
-                 //1.  定义栈结构
-                 function Stack() {
-                   this.items = [];
-                   Stack.prototype.push(e) = function () {
-                     this.items.push(e);
-                   };
-                   Stack.prototype.pop = function () {
-                     this.items.pop()
-                   };
-                   Stack.prototype.isempty = function () {
-                     return this.items.length == 0;
-                   };
-                 }
-                 // 2.判断输出是否为空，即为合法
-                 let s
-                 let stack = new Stack();
-                 
+      //1.  定义栈结构
+      function Stack() {
+        this.items = [];
+        Stack.prototype.push(e) = function () {
+          this.items.push(e);
+        };
+        Stack.prototype.pop = function () {
+          this.items.pop();
+        };
+        Stack.prototype.isempty = function () {
+          return this.items.length == 0;
+        };
+      }
+      // 2.判断输出是否为空，即为合法
+      let s;
+      let stack = new Stack();
 
-
-                 return stack.isempty(s);
+      return stack.isempty(s);
     </script>
   </body>
 </html>
