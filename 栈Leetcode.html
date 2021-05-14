@@ -64,3 +64,47 @@
 </body>
 
 </html>
+
+<script>
+    var isValid = function (s) {
+      s=s.splice('')
+      if(s%2!==0){
+        return false
+      }
+      let stack = []
+      for (let i=0;i<s.length;i++){
+        switch(s[i]){
+          case '(' : stack.push('(')
+          break;
+          case '{' : stack.push('{')
+          break;
+          case '[' : stack.push('[')
+          break;
+          case ']':
+            if(stack.pop()=='['){}
+            else{
+              return false
+            }
+            break
+          case '}':
+            if(stack.pop()=='{'){}
+            else{
+              return false
+            }
+            break
+          case ')': 
+          if(stack.pop()=='('){}
+          else{
+            return false
+          }
+          break
+        }
+        if(s.length==0){
+          return true
+        }else{
+          return false
+        }
+       
+      }
+    }
+</script>
