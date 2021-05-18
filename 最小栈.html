@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>最小栈</title>
+  </head>
+  <body>
+    设计一个支持 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。
+    push(x) —— 将元素 x 推入栈中。 pop() —— 删除栈顶的元素。 top() ——
+    获取栈顶元素。 getMin() —— 检索栈中的最小元素。 来源：力扣（LeetCode）
+    链接：https://leetcode-cn.com/problems/min-stack
+    著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+    <script>
+      // 双栈法
+      var MinStack = function () {
+        this.items = [];
+        this.help = [];
+      };
+      MinStack.prototype.push = function (val) {
+        this.items.push(val);
+        this.help.push([val, min]);
+      };
+
+      MinStack.prototype.pop = function () {
+        if (this.items.length != 0) {
+          return items.splice(items[length - 1]);
+        }
+      };
+
+      MinStack.prototype.top = function () {
+        if (this.items.length == 0) {
+        } else {
+          return items[items.length - 1];
+        }
+      };
+      MinStack.prototype.getMin = function () {
+        if (this.items.length == 0) {
+        } else {
+          let tmp = items[0];
+          for (let i = 0; i < items.length; i++) {
+            if (items[i] < tmp) {
+              tmp = items[i];
+            } else {
+            }
+            return tmp;
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
