@@ -49,22 +49,57 @@ var findMin = function (numbers) {
       right = right - 1;
     }
   }
-  return numbers[left]
+  return numbers[left];
 };
 
 /**3. 数字序列中某一位的数字 01234567891011121314…的格式序列化到一个字符序列
  * @param {number} n
  * @return {number}
  */
- var findNthDigit = function(n) {
-//todo
+var findNthDigit = function (n) {
+  //todo
 };
 
-/**4. 统计一个数字在有序数组中出现的次数。
+/**4. 统计一个数字在有序数组中出现的次数。 236 888 9
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
  */
- var search = function(nums, target) {
+var search = function (nums, target) {
+  // 二分法找左边界
+  function findLeft() {
+    let left = 0;
+    let right = nums.length - 1;
+    while (left < right) {
+      let mid = Math.floor((left + right) / 2);
+      if (nums[mid] < target) {
+        left = mid + 1;
+      } else if (nums[mid] > target) {
+        right = mid;
+      } else {
+        right--;
+      }
+    }
+    return left;
+  }
 
+  // 二分法找右边界
+  function findRight() {
+    let left = 0;
+    let right = nums.length - 1;
+    while (left < right) {
+      let mid = Math.floor((left + right) / 2);
+      if (nums[mid] < target) {
+        left = mid + 1;
+      } else if (nums[mid] > target) {
+        right = mid;
+      } else {
+        left++;
+      }
+    }
+    return left - 1;
+  }
+
+  //次数= 右边界-左边界
+  return findRight() - findLeft() + 1;
 };
