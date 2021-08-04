@@ -103,3 +103,24 @@ var search = function (nums, target) {
   //次数= 右边界-左边界
   return findRight() - findLeft() + 1;
 };
+
+/**5. 0～n-1中缺失的数字
+ * @param {number[]} nums
+ * @return {number}
+ */
+ var missingNumber = function(nums) {
+  //left最终指向缺失后数组的首位!!!
+   let left = 0;
+   //right最终指向缺失前有序数组的末尾!!!
+   let right = nums.length;
+   while (left <= right) {
+     let mid = Math.floor((left + right)/2);
+     // 索引!=数值
+     if (nums[mid] != mid) {
+       right = mid - 1 ;
+     } else {     
+       left = mid + 1;
+     }
+   }
+   return left
+ };
