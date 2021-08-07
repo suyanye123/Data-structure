@@ -1,7 +1,7 @@
 /**
- * 一些个人的理解:二分查找的关键在于,部分有序,所以可以跳过部分查找
+ * 个人的理解:二分查找的关键在于,部分有序,所以可以跳过部分查找
  */
-/**1. 二维数组中的查找
+/**1. 二维数组中的查找(剑指offer)
  * @param {number[][]} matrix
  * @param {number} target
  * @return {boolean}
@@ -28,7 +28,7 @@ var findNumberIn2DArray = function (matrix, target) {
   }
 };
 
-/**2. 寻找旋转排序数组中的最小值 [4,5,6,7,0,1,4]
+/**2. 寻找旋转排序数组中的最小值 [4,5,6,7,0,1,4] (剑指offer)
  * @param {number[]} numbers
  * @return {number}
  */
@@ -52,7 +52,7 @@ var findMin = function (numbers) {
   return numbers[left];
 };
 
-/**3. 数字序列中某一位的数字 01234567891011121314…的格式序列化到一个字符序列
+/**3. 数字序列中某一位的数字 01234567891011121314…的格式序列化到一个字符序列 (剑指offer)
  * @param {number} n
  * @return {number}
  */
@@ -60,7 +60,7 @@ var findNthDigit = function (n) {
   //todo
 };
 
-/**4. 统计一个数字在有序数组中出现的次数。 236 888 9
+/**4. 统计一个数字在有序数组中出现的次数。(剑指offer) 236 888 9
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
@@ -104,7 +104,7 @@ var search = function (nums, target) {
   return findRight() - findLeft() + 1;
 };
 
-/**5. 0～n-1中缺失的数字
+/**5. 0～n-1中缺失的数字(剑指offer)
  * @param {number[]} nums
  * @return {number}
  */
